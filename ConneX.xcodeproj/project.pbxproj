@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		6C8335B01CFF22BC0074AA78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335AF1CFF22BC0074AA78 /* main.m */; };
 		6C8335B31CFF22BC0074AA78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335B21CFF22BC0074AA78 /* AppDelegate.m */; };
-		6C8335B61CFF22BC0074AA78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335B51CFF22BC0074AA78 /* ViewController.m */; };
 		6C8335B91CFF22BC0074AA78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8335B71CFF22BC0074AA78 /* Main.storyboard */; };
 		6C8335BC1CFF22BC0074AA78 /* ConneX.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335BA1CFF22BC0074AA78 /* ConneX.xcdatamodeld */; };
 		6C8335BE1CFF22BC0074AA78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8335BD1CFF22BC0074AA78 /* Assets.xcassets */; };
 		6C8335C11CFF22BC0074AA78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8335BF1CFF22BC0074AA78 /* LaunchScreen.storyboard */; };
+		6C8335CA1CFF237E0074AA78 /* EquipmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335C91CFF237E0074AA78 /* EquipmentsTableViewController.m */; };
+		6C8335D01CFF23ED0074AA78 /* CNXEquipment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */; };
+		6C8335D41CFF2F920074AA78 /* AddanEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +23,17 @@
 		6C8335AF1CFF22BC0074AA78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C8335B11CFF22BC0074AA78 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C8335B21CFF22BC0074AA78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C8335B41CFF22BC0074AA78 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C8335B51CFF22BC0074AA78 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C8335B81CFF22BC0074AA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8335BB1CFF22BC0074AA78 /* ConneX.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ConneX.xcdatamodel; sourceTree = "<group>"; };
 		6C8335BD1CFF22BC0074AA78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8335C01CFF22BC0074AA78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C8335C21CFF22BC0074AA78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C8335C81CFF237E0074AA78 /* EquipmentsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EquipmentsTableViewController.h; sourceTree = "<group>"; };
+		6C8335C91CFF237E0074AA78 /* EquipmentsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EquipmentsTableViewController.m; sourceTree = "<group>"; };
+		6C8335CE1CFF23ED0074AA78 /* CNXEquipment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNXEquipment.h; sourceTree = "<group>"; };
+		6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNXEquipment.m; sourceTree = "<group>"; };
+		6C8335D21CFF2F920074AA78 /* AddanEquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddanEquipmentViewController.h; sourceTree = "<group>"; };
+		6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddanEquipmentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +66,10 @@
 		6C8335AD1CFF22BC0074AA78 /* ConneX */ = {
 			isa = PBXGroup;
 			children = (
-				6C8335B11CFF22BC0074AA78 /* AppDelegate.h */,
-				6C8335B21CFF22BC0074AA78 /* AppDelegate.m */,
-				6C8335B41CFF22BC0074AA78 /* ViewController.h */,
-				6C8335B51CFF22BC0074AA78 /* ViewController.m */,
-				6C8335B71CFF22BC0074AA78 /* Main.storyboard */,
+				6C8335D11CFF23F20074AA78 /* Model */,
+				6C8335CB1CFF239B0074AA78 /* AppDelegate */,
+				6C8335CD1CFF23B40074AA78 /* StoryBoard */,
+				6C8335CC1CFF23A60074AA78 /* ViewControllers */,
 				6C8335BD1CFF22BC0074AA78 /* Assets.xcassets */,
 				6C8335BF1CFF22BC0074AA78 /* LaunchScreen.storyboard */,
 				6C8335C21CFF22BC0074AA78 /* Info.plist */,
@@ -80,6 +85,43 @@
 				6C8335AF1CFF22BC0074AA78 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C8335CB1CFF239B0074AA78 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6C8335B11CFF22BC0074AA78 /* AppDelegate.h */,
+				6C8335B21CFF22BC0074AA78 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6C8335CC1CFF23A60074AA78 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6C8335C81CFF237E0074AA78 /* EquipmentsTableViewController.h */,
+				6C8335C91CFF237E0074AA78 /* EquipmentsTableViewController.m */,
+				6C8335D21CFF2F920074AA78 /* AddanEquipmentViewController.h */,
+				6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6C8335CD1CFF23B40074AA78 /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				6C8335B71CFF22BC0074AA78 /* Main.storyboard */,
+			);
+			name = StoryBoard;
+			sourceTree = "<group>";
+		};
+		6C8335D11CFF23F20074AA78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C8335CE1CFF23ED0074AA78 /* CNXEquipment.h */,
+				6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8335B61CFF22BC0074AA78 /* ViewController.m in Sources */,
+				6C8335D01CFF23ED0074AA78 /* CNXEquipment.m in Sources */,
 				6C8335B31CFF22BC0074AA78 /* AppDelegate.m in Sources */,
 				6C8335BC1CFF22BC0074AA78 /* ConneX.xcdatamodeld in Sources */,
+				6C8335CA1CFF237E0074AA78 /* EquipmentsTableViewController.m in Sources */,
+				6C8335D41CFF2F920074AA78 /* AddanEquipmentViewController.m in Sources */,
 				6C8335B01CFF22BC0074AA78 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ConneX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moorsideinc.ConneX;
@@ -278,6 +323,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ConneX/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.moorsideinc.ConneX;
