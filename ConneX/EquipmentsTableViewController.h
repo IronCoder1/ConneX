@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EquipmentsTableViewController : UITableViewController
+@interface EquipmentsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) NSMutableArray *equipmentList;
+
 
 @end

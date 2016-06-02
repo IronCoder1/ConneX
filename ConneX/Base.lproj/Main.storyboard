@@ -49,7 +49,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rtH-vz-Z2N"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TIy-jC-y9j">
                             <connections>
-                                <segue destination="EgI-J0-u0F" kind="show" identifier="toAddEquipmentSegue" id="qSj-iK-yi7"/>
+                                <segue destination="EgI-J0-u0F" kind="show" identifier="toAddSegue" id="CAr-3M-gub"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,6 +73,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXl-lg-DWD">
                                 <rect key="frame" x="264" y="405" width="72" height="30"/>
                                 <state key="normal" title="Add Photo"/>
+                                <connections>
+                                    <action selector="addPhotoButton:" destination="EgI-J0-u0F" eventType="touchUpInside" id="z5D-gu-ahb"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SOd-cq-0PC">
                                 <rect key="frame" x="180" y="175" width="240" height="30"/>
@@ -89,7 +92,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter description e.g full kit" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpW-Lu-Wyb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter rental details e.g lens included" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KpW-Lu-Wyb">
                                 <rect key="frame" x="180" y="295" width="240" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -133,14 +136,25 @@
                             <constraint firstItem="XKB-Sw-hkK" firstAttribute="centerX" secondItem="SvW-za-aHV" secondAttribute="centerX" id="v9R-qj-MW2"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem systemItem="save" id="bLU-ny-54k"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="nBc-n5-FrJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="vpT-dq-XZl">
+                            <connections>
+                                <action selector="saveEqiup:" destination="EgI-J0-u0F" id="PCq-Tg-gGh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="eBrandTextfield" destination="2nH-cf-ghA" id="ieS-Iu-Mcp"/>
+                        <outlet property="eDescTextfield" destination="KpW-Lu-Wyb" id="ffP-fg-KkZ"/>
+                        <outlet property="eModelTextfield" destination="XKB-Sw-hkK" id="O71-R2-cjO"/>
+                        <outlet property="eNameTextfield" destination="SOd-cq-0PC" id="T8A-Y1-56b"/>
+                        <outlet property="eRateTextfield" destination="WRx-cr-uaa" id="uE3-QA-ijB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-en-8cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="236"/>
+            <point key="canvasLocation" x="1627" y="214"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M9l-es-ppe">

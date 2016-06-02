@@ -7,8 +7,10 @@
 //
 
 #import "EquipmentsTableViewController.h"
+#import "CNXEquipment.h"
+#import "AddanEquipmentViewController.h"
 
-@interface EquipmentsTableViewController ()
+@interface EquipmentsTableViewController ()<AddanEquipmentViewControllerDelegate>
 
 @end
 
@@ -16,12 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.equipmentList = [[NSMutableArray alloc]initWithCapacity:0];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +28,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)returnEquipment:(CNXEquipment *)myEquipment
+{
+    [self.equipmentList addObject:myEquipment];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [self.equipmentList count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"equipmentCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    CNXEquipment *cEquipment = self.equipmentList[indexPath.row];
+    cell.textLabel.text = cEquipment.eName;
+    cell.detailTextLabel.text = cEquipment.eBrand;
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -85,14 +88,15 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+//    AddanEquipmentViewController *aevc = [[AddanEquipmentViewController alloc]init];
+//    aevc.delegate = self;
 }
-*/
+
 
 @end

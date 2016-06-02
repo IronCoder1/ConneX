@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CNXEquipment.h"
+
+
+@protocol AddanEquipmentViewControllerDelegate<NSObject>
+
+-(void)returnEquipment:(CNXEquipment *)myEquipment;
+
+@end
 
 @interface AddanEquipmentViewController : UIViewController
+
+@property (nonatomic, weak)id<AddanEquipmentViewControllerDelegate>delegate;
+
 
 @end
