@@ -49,7 +49,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rtH-vz-Z2N"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="TIy-jC-y9j">
                             <connections>
-                                <segue destination="EgI-J0-u0F" kind="show" identifier="toAddSegue" id="CAr-3M-gub"/>
+                                <segue destination="4pE-j5-2kj" kind="presentation" identifier="toTextFieldSegue" id="S2d-Ai-DvV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,7 +154,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PbA-en-8cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1627" y="214"/>
+            <point key="canvasLocation" x="2401" y="921"/>
+        </scene>
+        <!--Add Equipment-->
+        <scene sceneID="EvN-4b-YBp">
+            <objects>
+                <viewController id="NjI-Sq-ktf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gn3-HF-ihM"/>
+                        <viewControllerLayoutGuide type="bottom" id="72a-1j-TeX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dkq-xs-fNz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter equipment name..." minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wZ6-Ax-hd0">
+                                <rect key="frame" x="15" y="64" width="570" height="300"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wZ6-Ax-hd0" firstAttribute="height" secondItem="Dkq-xs-fNz" secondAttribute="height" multiplier="0.5" id="IQb-cA-C8M"/>
+                            <constraint firstItem="wZ6-Ax-hd0" firstAttribute="width" secondItem="Dkq-xs-fNz" secondAttribute="width" multiplier="0.95" id="Onq-kx-cdw"/>
+                            <constraint firstItem="wZ6-Ax-hd0" firstAttribute="centerX" secondItem="Dkq-xs-fNz" secondAttribute="centerX" id="VlT-sr-7WG"/>
+                            <constraint firstItem="wZ6-Ax-hd0" firstAttribute="top" secondItem="gn3-HF-ihM" secondAttribute="bottom" id="ouT-rR-WxC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Equipment" id="SYK-bz-QYY">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="2Dc-EY-9JK"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4J-7W-Gdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253" y="236"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M9l-es-ppe">
@@ -173,6 +207,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HiW-Eh-2Da" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="305" y="236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zhq-xb-HjE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4pE-j5-2kj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q4m-4j-wwX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NjI-Sq-ktf" kind="relationship" relationship="rootViewController" id="X6l-FK-1TP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sAG-bC-sZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605" y="236"/>
         </scene>
     </scenes>
 </document>

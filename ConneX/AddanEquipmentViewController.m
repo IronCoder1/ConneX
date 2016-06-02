@@ -36,19 +36,16 @@
     // Dispose of any resources that can be recreated.
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField
+//-(BOOL)textFieldShouldReturn:(UITextField *)textField
+//{
+//    [textField resignFirstResponder];
+//    return YES;
+//}
+-(void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if (![self.eNameTextfield.text isEqualToString:@""] && ![self.eRateTextfield.text isEqualToString:@""])
-    {
-    [textField resignFirstResponder];
-    }
-    else
-    {
-        // show alert
-    }
-    return YES;
+    [self performSegueWithIdentifier:@"toTextFieldSegue" sender:self];
+    
 }
-
 - (IBAction)saveEqiup:(id)sender
 {
     
@@ -70,16 +67,18 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-// Get the new view controller using [segue destinationViewController].
-// Pass the selected object to the new view controller.
+
+    if ([segue.identifier isEqualToString:@"toTextFieldSegue"])
+    {
+        
+    }
 }
 
-*/
 
 - (IBAction)addPhotoButton:(id)sender
 {
@@ -123,13 +122,10 @@
 
 -(NSString *)saveImageToDisk
 {
-    //function to search for paths in app bundle returns an array of string objects as written in documentation
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSUUID *uuID = [NSUUID UUID];
     NSString *secondBaseString = [NSString stringWithFormat:@"%@.png",[uuID UUIDString]];
-    //adds the slash and makes complete directory address
     NSString *filePath = [[paths objectAtIndex:0] stringByAppendingPathComponent:secondBaseString];
-    // change image to png and save it in file path atomically
     [UIImagePNGRepresentation(self.anEquipment.eImage) writeToFile:filePath atomically:YES];
     NSLog(@"file path %@", filePath);
     return filePath;
@@ -139,8 +135,6 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
     UIImage *itemImage = [info objectForKey:UIImagePickerControllerOriginalImage];
-    //image exist in memory here, we need to save to disk then assign path address to item.image property
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
