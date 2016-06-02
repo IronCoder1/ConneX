@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface CNXEquipment : NSObject
 @property (copy, nonatomic) NSString *eModel, *eDescription, *eImageString, *eBrand, *eName;
 
+@property (strong, nonatomic) UIImage *eImage;
 @property (assign, nonatomic) float ePrice;
 
 

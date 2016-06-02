@@ -16,11 +16,13 @@
 
 @implementation EquipmentsTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+//    self.tableView.delegate = self;
+
     self.equipmentList = [[NSMutableArray alloc]initWithCapacity:0];
     
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,6 +33,7 @@
 -(void)returnEquipment:(CNXEquipment *)myEquipment
 {
     [self.equipmentList addObject:myEquipment];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -94,8 +97,9 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-//    AddanEquipmentViewController *aevc = [[AddanEquipmentViewController alloc]init];
-//    aevc.delegate = self;
+    AddanEquipmentViewController *aevc = segue.destinationViewController;
+    aevc.delegate = self;
+
 }
 
 
