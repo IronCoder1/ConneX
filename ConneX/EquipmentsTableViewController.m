@@ -9,8 +9,9 @@
 #import "EquipmentsTableViewController.h"
 #import "CNXEquipment.h"
 #import "AddanEquipmentViewController.h"
+#import "NameTextViewController.h"
 
-@interface EquipmentsTableViewController ()<AddanEquipmentViewControllerDelegate>
+@interface EquipmentsTableViewController ()<NameTextViewControllerDelegate>
 
 @end
 
@@ -19,10 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.tableView.delegate = self;
-
     self.equipmentList = [[NSMutableArray alloc]initWithCapacity:0];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,11 +36,13 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     return [self.equipmentList count];
 }
 
@@ -97,9 +97,9 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    AddanEquipmentViewController *aevc = segue.destinationViewController;
-    aevc.delegate = self;
-
+    UINavigationController *navController = (UINavigationController *) segue.destinationViewController;
+    NameTextViewController *ntVC = (NameTextViewController *) navController.topViewController;
+    ntVC.delegate = self;
 }
 
 

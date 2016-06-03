@@ -16,6 +16,8 @@
 		6C8335CA1CFF237E0074AA78 /* EquipmentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335C91CFF237E0074AA78 /* EquipmentsTableViewController.m */; };
 		6C8335D01CFF23ED0074AA78 /* CNXEquipment.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */; };
 		6C8335D41CFF2F920074AA78 /* AddanEquipmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */; };
+		6C8335D71D0064A40074AA78 /* NameTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335D61D0064A40074AA78 /* NameTextViewController.m */; };
+		6C8335DB1D0080D80074AA78 /* ModelTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8335DA1D0080D80074AA78 /* ModelTextViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,10 @@
 		6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNXEquipment.m; sourceTree = "<group>"; };
 		6C8335D21CFF2F920074AA78 /* AddanEquipmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddanEquipmentViewController.h; sourceTree = "<group>"; };
 		6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddanEquipmentViewController.m; sourceTree = "<group>"; };
+		6C8335D51D0064A40074AA78 /* NameTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameTextViewController.h; sourceTree = "<group>"; };
+		6C8335D61D0064A40074AA78 /* NameTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameTextViewController.m; sourceTree = "<group>"; };
+		6C8335D91D0080D80074AA78 /* ModelTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelTextViewController.h; sourceTree = "<group>"; };
+		6C8335DA1D0080D80074AA78 /* ModelTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelTextViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,10 @@
 			children = (
 				6C8335C81CFF237E0074AA78 /* EquipmentsTableViewController.h */,
 				6C8335C91CFF237E0074AA78 /* EquipmentsTableViewController.m */,
-				6C8335D21CFF2F920074AA78 /* AddanEquipmentViewController.h */,
-				6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */,
+				6C8335D51D0064A40074AA78 /* NameTextViewController.h */,
+				6C8335D61D0064A40074AA78 /* NameTextViewController.m */,
+				6C8335D91D0080D80074AA78 /* ModelTextViewController.h */,
+				6C8335DA1D0080D80074AA78 /* ModelTextViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -111,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				6C8335B71CFF22BC0074AA78 /* Main.storyboard */,
+				6C8335D81D00689C0074AA78 /* UnusedToDelete */,
 			);
 			name = StoryBoard;
 			sourceTree = "<group>";
@@ -122,6 +131,15 @@
 				6C8335CF1CFF23ED0074AA78 /* CNXEquipment.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		6C8335D81D00689C0074AA78 /* UnusedToDelete */ = {
+			isa = PBXGroup;
+			children = (
+				6C8335D21CFF2F920074AA78 /* AddanEquipmentViewController.h */,
+				6C8335D31CFF2F920074AA78 /* AddanEquipmentViewController.m */,
+			);
+			name = UnusedToDelete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C8335D01CFF23ED0074AA78 /* CNXEquipment.m in Sources */,
+				6C8335DB1D0080D80074AA78 /* ModelTextViewController.m in Sources */,
+				6C8335D71D0064A40074AA78 /* NameTextViewController.m in Sources */,
 				6C8335B31CFF22BC0074AA78 /* AppDelegate.m in Sources */,
 				6C8335BC1CFF22BC0074AA78 /* ConneX.xcdatamodeld in Sources */,
 				6C8335CA1CFF237E0074AA78 /* EquipmentsTableViewController.m in Sources */,
